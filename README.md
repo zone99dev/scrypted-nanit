@@ -39,7 +39,7 @@ const interfaces = [
  `
 </p>
 ## Importing into Home Assistant
-  - Under the camera, make sure the rebroadcast plugin is enabled. 
-  - In the Camera settings go to the Stream and there should be a "RTSP Rebroadcast URL" box. Copy that value
-  - In HomeAssistant add a camera entity -> https://www.home-assistant.io/integrations/generic/ 
-      - The copied value is your "stream source"
+</p>Under the camera, make sure the rebroadcast plugin is enabled. 
+</p>In the Camera settings go to the Stream and there should be a "RTSP Rebroadcast URL" box. Copy that value
+</p>In HomeAssistant add a camera entity -> https://www.home-assistant.io/integrations/generic/ 
+</p>  The copied value is your "stream source"
