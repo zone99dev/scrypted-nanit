@@ -41,6 +41,8 @@ const interfaces = [
             ];
  ```
 
+ The Snapshot Photos are not working right now. You may see a "Failed Snapshot" screen until I can get that working
+
 ## Importing into Home Assistant
 - Under the camera, make sure the rebroadcast plugin is enabled. 
 - In the Camera settings go to the Stream and there should be a "RTSP Rebroadcast URL" box. Copy that value
