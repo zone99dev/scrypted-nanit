@@ -51,7 +51,6 @@ class NanitCameraDevice extends ScryptedDeviceBase implements Intercom, Camera, 
         const file = "rtmps://media-secured.nanit.com/nanit/"+ this.nativeId! +"."+this.plugin.access_token;
 
         return {
-            // the input doesn't HAVE to be an url, but if it is, provide this hint.
             url: undefined,
             inputArguments: [
                 '-i', file,
@@ -332,7 +331,7 @@ class NanitCameraPlugin extends ScryptedDeviceBase implements DeviceProvider, Se
 
             const device: Device = {
                 info: {
-                    model: 'Bronco Cam',
+                    model: 'Nanit Cam',
                     manufacturer: 'Nanit',
                 },
                 nativeId,
