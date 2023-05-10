@@ -28,9 +28,9 @@ class NanitCameraDevice extends ScryptedDeviceBase implements Intercom, Camera, 
     }
 
     async getVideoStream(options?: MediaStreamOptions): Promise<MediaObject> {
-        this.console.log("getVideoStream called")
+        this.console.log("Attempting to confirm access token to retrieve video stream")
         await this.plugin.tryLogin();
-        this.console.log("getVideoStream login call returned")
+        this.console.log("Login Succeeded. Returning video stream")
         let ffmpegInputVal: FFmpegInput;
 
         if (!this.nativeId) {
@@ -320,7 +320,6 @@ class NanitCameraPlugin extends ScryptedDeviceBase implements DeviceProvider, Se
 
 
         const babies: any[] = (await axios.get("https://api.nanit.com/babies", config)).data.babies;
-        // add code to retrieve the list of cameras.
         const devices: Device[] = [];
         for (const camera of babies) {
             const nativeId = camera.uid;
@@ -330,12 +329,7 @@ class NanitCameraPlugin extends ScryptedDeviceBase implements DeviceProvider, Se
                 ScryptedInterface.MotionSensor,
                 ScryptedInterface.Battery
             ];
-            // if (camera.isDoorbell) {
-            //     interfaces.push(
-            //         ScryptedInterface.BinarySensor,
-            //         ScryptedInterface.Intercom
-            //     );
-            // }
+
             const device: Device = {
                 info: {
                     model: 'Bronco Cam',
@@ -343,24 +337,11 @@ class NanitCameraPlugin extends ScryptedDeviceBase implements DeviceProvider, Se
                 },
                 nativeId,
                 name: camera.name,
-                // type: camera.isDoorbell ? ScryptedDeviceType.Doorbell : ScryptedDeviceType.Camera,
+    
                 type: ScryptedDeviceType.Camera,
                 interfaces,
             };
             devices.push(device);
-
-            // sample code to listen and report doorbell/motion events.
-            // varies by api
-            // camera.on('doorbell', () => {
-            //     const camera = this.devices.get(nativeId);
-            //     camera?.triggerBinaryState();
-            // });
-            // sample code to listen and report doorbell/motion events.
-            // varies by api
-            // camera.on('motion', () => {
-            //     const camera = this.devices.get(nativeId);
-            //     camera?.triggerMotion();
-            // });
         }
 
         await deviceManager.onDevicesChanged({
