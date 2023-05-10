@@ -20,7 +20,7 @@ The  `Terminal` area may show an authentication failure and prompt you to log in
 - Now go back to devices and you should see a new device that is named the same as your Nanit Device. Click it and then click the video and it should be streaming!  
 
 
-##Troubleshooting
+## Troubleshooting
 
 If you aren't seeing the video load, first try clearing the Expiration value in the `Nanit Camera Plugin` and click save. This will force the plugin to get a new token.  
 
