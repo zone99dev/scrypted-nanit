@@ -1,0 +1,40 @@
+{
+   "name": "@scrypted/sample-cameraprovider",
+   "scripts": {
+      "scrypted-setup-project": "scrypted-setup-project",
+      "prescrypted-setup-project": "scrypted-package-json",
+      "build": "scrypted-webpack",
+      "preprepublishOnly": "scrypted-changelog",
+      "prepublishOnly": "scrypted-changelog && WEBPACK_DEVTOOL=nosources-source-map NODE_ENV=production scrypted-webpack",
+      "prescrypted-vscode-launch": "scrypted-webpack",
+      "scrypted-vscode-launch": "scrypted-deploy-debug",
+      "scrypted-deploy-debug": "scrypted-deploy-debug",
+      "scrypted-debug": "scrypted-debug",
+      "scrypted-deploy": "scrypted-deploy",
+      "scrypted-changelog": "scrypted-changelog",
+      "scrypted-package-json": "scrypted-package-json",
+      "scrypted-readme": "scrypted-readme"
+   },
+   "keywords": [
+      "scrypted",
+      "plugin",
+      "Nanit"
+   ],
+   "scrypted": {
+      "name": "Nanit Camera Plugin",
+      "type": "DeviceProvider",
+      "interfaces": [
+         "DeviceCreator",
+         "DeviceProvider",
+         "Settings"
+      ]
+   },
+   "devDependencies": {
+      "@scrypted/sdk": "^0.2.87",
+      "@types/node": "^18.15.11"
+   },
+   "version": "0.0.10",
+   "dependencies": {
+      "axios": "^1.4.0"
+   }
+}
