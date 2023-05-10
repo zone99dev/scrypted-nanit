@@ -1,13 +1,14 @@
 
 # Nanit Camera
 ## How to install:
-Install Node and npm -> https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-Install https://www.scrypted.app/ and follow instructions on the website.
-Once you have Scrypted running and can access it...continue
+- Install Node and npm -> https://docs.npmjs.com/downloading-and-installing-node-js-and-npm  
+- Install https://www.scrypted.app/ and follow instructions on the website.  
+- Once you have Scrypted running and can access it...continue  
 
 - Open this plugin directory in VS Code  
 - In a terminal cd into this project directory  
-- run `npm install`  
+- run `npm install` 
+- run `npm run build` 
 - run `npm run scrypted-deploy 127.0.0.1` NOTE: you can replace `127.0.0.1` with the ip address of the server you installed scrypted on  
 
 The  `Terminal` area may show an authentication failure and prompt you to log in to the Scrypted Management Console with `npx scrypted login`. You will only need to do this once. You can then relaunch afterwards.  
