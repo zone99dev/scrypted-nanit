@@ -4,14 +4,17 @@
 - Install Node and npm -> https://docs.npmjs.com/downloading-and-installing-node-js-and-npm  
 - Install https://www.scrypted.app/ and follow instructions on the website.  
 - Once you have Scrypted running and can access it...continue  
+- Install Scrypted Plugins using Plugins tab in Scrypted Management Console.
+    - FFmpeg Camera Plugin (@scrypted/ffmpeg-camera) 
+    - Rebroadcast Plugin (@scrypted/prebuffer-mixin)
 
 - Open this plugin directory in VS Code  
 - In a terminal cd into this project directory  
 - run `npm install` 
 - run `npm run build` 
-- run `npm run scrypted-deploy 127.0.0.1` NOTE: you can replace `127.0.0.1` with the ip address of the server you installed scrypted on  
-
-The  `Terminal` area may show an authentication failure and prompt you to log in to the Scrypted Management Console with `npx scrypted login`. You will only need to do this once. You can then relaunch afterwards.  
+- run `npm run scrypted-deploy 127.0.0.1` 
+  - NOTE: You should replace `127.0.0.1` with the ip address of the server you installed Scrypted on if it is not installed locally.
+  - NOTE: The `Terminal` area may show an authentication failure and prompt you to log in to the Scrypted Management Console with `npx scrypted login 127.0.0.1`, again replacing `127.0.0.1` with the IP address of the Scrypted server. You will only need to do this once. You can then run the previous `scrypted-deploy` command again.
   
 - Launch Scrypted, go to "Devices"  
 - You should see a device named `Nanit Camera Plugin`, click it  
