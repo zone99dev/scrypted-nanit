@@ -11,7 +11,7 @@
 - run `npm run build` 
 - run `npm run scrypted-deploy 127.0.0.1` NOTE: you can replace `127.0.0.1` with the ip address of the server you installed scrypted on  
 
-The  `Terminal` area may show an authentication failure and prompt you to log in to the Scrypted Management Console with `npx scrypted login`. You will only need to do this once. You can then relaunch afterwards.  
+The  `Terminal` area may show an authentication failure and prompt you to log in to the Scrypted Management Console with `npx scrypted login`. You will only need to do this once. You can then relaunch afterwards.  The command if your scrypted instance is remote is `npx scrypted login ip:port`
   
 - Launch Scrypted, go to "Devices"  
 - You should see a device named `Nanit Camera Plugin`, click it  
