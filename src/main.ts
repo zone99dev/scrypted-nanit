@@ -115,7 +115,7 @@ class NanitCameraPlugin extends ScryptedDeviceBase implements DeviceProvider, Se
         twoFactorCode: {
             title: 'Two Factor Code',
             description: 'Optional: If 2 factor is enabled on your account, enter the code sent to your email or phone number.',
-            type: "number",
+            type: "string",
             onPut: async (oldValue, newValue) => {
                 await this.tryLogin(newValue);
                 await this.syncDevices(0);
